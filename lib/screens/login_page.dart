@@ -2,11 +2,11 @@
 // import 'dart:math';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:toku/helper/show_snack_bar.dart';
 import 'package:toku/screens/home_page.dart';
-import 'package:toku/screens/home_page2.dart';
 import 'package:toku/screens/resgister_page.dart';
 import 'package:toku/widgets/custom_button.dart';
 import 'package:toku/widgets/custom_text_field.dart';
@@ -102,13 +102,15 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 CustomButon(
                   onTap: () async {
+                    WidgetsFlutterBinding.ensureInitialized();
+                    await Firebase.initializeApp();
                     if (formKey.currentState!.validate()) {
                       isLoading = true;
                       setState(() {});
                       try {
                         await loginUser();
                         Navigator.push(context, MaterialPageRoute(builder: (context) {
-                          return const HomePage2();
+                          return const HomePage();
                         }));
                       } on FirebaseAuthException catch (ex) {
                         if (ex.code == 'user-not-found') {
