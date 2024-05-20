@@ -46,13 +46,6 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                              return HomePage();
-                            }));
-                      },
                       child: Text(
                       'TOKU トク',
                       style: TextStyle(
@@ -61,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                         fontFamily: 'pacifico',
                       ),
                     ),
-                    ),
+        
                   ],
                 ),
                 SizedBox(
