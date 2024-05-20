@@ -54,39 +54,6 @@ class HomePage extends StatelessWidget {
               text: 'Phrases',
               color: const Color(0xff50ADC7),
             ),
-           SizedBox(
-             height: 15,
-           ),
-            Padding(
-              padding: const EdgeInsets.all(8),
-              child: Row(
-                children: [
-                  const Text(
-                    "Learn more and",
-                    style: TextStyle(fontSize: 16, color: Colors.black),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) {
-                        return RegisterPage();
-                      }));
-                    },
-        
-                    child: const Text(
-                      '  Sign In ',
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Color(0xff078bf6),
-                      ),
-                    ),
-                  ),
-                  const Text(
-                    "now!",
-                    style: TextStyle(fontSize: 16, color: Colors.black),
-                  ),
-                ],
-              ),
-            )
           ],
         ),
       ),
