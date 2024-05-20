@@ -46,14 +46,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                              return HomePage();
-                            }));
-                      },
-                      child: Text(
+                      Text(
                       'TOKU トク',
                       style: TextStyle(
                         fontSize: 32,
@@ -61,7 +54,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         fontFamily: 'pacifico',
                       ),
                     ),
-                    ),
+      
                   ],
                 ),
                 SizedBox(
