@@ -46,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                      child: Text(
+                      Text(
                       'TOKU トク',
                       style: TextStyle(
                         fontSize: 32,
