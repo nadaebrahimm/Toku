@@ -12,7 +12,7 @@ class Category extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.only(left: 24),
         alignment: Alignment.centerLeft,
-        height: 160,
+        height: 182,
         width: double.infinity,
         color: color,
         child: Text(
